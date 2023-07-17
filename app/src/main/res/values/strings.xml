@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">ListAssigment</string>
+    <string name="Enter_your_name">Enter your name</string>
+    <string name="Add">ADD</string>
+    <string name="Remove">Remove</string>
+    <string name="Update">UPDATE</string>
+    <string name="Delete">DELETE</string>
+</resources>
