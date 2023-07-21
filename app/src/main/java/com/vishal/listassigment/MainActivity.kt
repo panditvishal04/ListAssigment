@@ -1,22 +1,16 @@
 package com.vishal.listassigment
 
-import android.app.Activity
-import android.app.AlertDialog
 import android.app.Dialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.preference.EditTextPreference
 import android.view.ViewGroup
-import android.widget.Adapter
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.EditText
 import android.widget.ListView
-import android.widget.TextView
 import android.widget.Toast
 import com.vishal.listassigment.databinding.ActivityMainBinding
-import java.text.ParsePosition
+
 
 
 class MainActivity : AppCompatActivity() {
@@ -37,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.listView.setOnItemClickListener { parent, view, position, id ->
 
-        var dialog = Dialog(this)
+            var dialog = Dialog(this)
             dialog.setContentView(R.layout.secondcustom)
             dialog.getWindow()?.setLayout(
                 ViewGroup.LayoutParams.MATCH_PARENT,
@@ -57,6 +51,8 @@ class MainActivity : AppCompatActivity() {
                 dialog.dismiss()
             }
             btnDelete.setOnClickListener {
+                arrayList.removeAt(position)
+                adapter.notifyDataSetChanged()
                 dialog.dismiss()
             }
 
